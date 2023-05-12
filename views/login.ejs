@@ -1,0 +1,90 @@
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div
+      class="content-wrapper d-flex align-items-center auth px-0"
+      style="background-image: url('/img/f-bg.png')"
+    >
+      <div class="row w-100 mx-0">
+        <div class="col-lg-4 mx-auto">
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+            <% if (infoLoginObj != '') { %>
+            <div class="col-12 alert alert-success alert-dismissible">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close"
+                >&times;</a
+              >
+              <h3><%= infoLoginObj %></h3>
+            </div>
+            <% } %> <% if (infoErrorsObj != '') { %>
+            <div class="col-12 alert alert-danger alert-dismissible">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close"
+                >&times;</a
+              >
+              <h3><%= infoErrorsObj %></h3>
+            </div>
+            <% } %>
+            <h2 class="text-center text-warning"><b>F&D Zone xin chào!</b></h2>
+
+            <!-- <h3 class="text-center font-weight-light">
+              Hãy đăng nhập để tiếp tục.
+            </h3> -->
+            <form class="pt-3" action="/login" method="POST">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="Email" class="form-label"><H3>Email</H3></label>
+                  <input
+                    style="font-size: 16px"
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control form-control-lg"
+                    autofocus
+                  />
+                  <hr />
+                </div>
+
+                <div class="col-12">
+                  <label for="password" class="form-label"
+                    ><H3>Mật khẩu</H3></label
+                  >
+                  <input
+                    style="font-size: 16px"
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="form-control form-control-lg"
+                  />
+                  <hr />
+                </div>
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn btn-block btn-warning btn-lg auth-form-btn text-white"
+                  >
+                    <h2>Đăng nhập</h2>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="text-center mt-4 font-weight-bold">
+              <h5>
+                <a href="#" class="text-primary" style="font-size: 17px"
+                  >Quên mật khẩu</a
+                >
+              </h5>
+            </div>
+            <div class="text-center mt-4 font-weight-light">
+              <h3>
+                Bạn chưa có tài khoản?<br />
+                <a href="/register" class="text-primary" style="font-size: 17px"
+                  >Đăng ký ngay</a
+                >
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content-wrapper ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>

@@ -1,0 +1,53 @@
+<div class="content-body" style="margin-top: 10%">
+  <!-- row -->
+  <div class="container-fluid d-flex justify-content-center">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-body">
+          <div class="row rounded">
+            <% if(invoice != ''){ %>
+            <div class="row">
+              <div class="col-12"><h2>Tên khách hàng: <%= client.name %></h2></div>
+              <div class="col-12">
+                <h4>Thời gian tạo: <%= invoice.createTime %></h4>
+              </div>
+              <div class="col-12">
+                <h4>Địa chỉ: <%= invoice.deliveryAddress %></h4>
+              </div>
+              <div class="col-12"><h4>Số điện thoại: <%= invoice.phoneNumber %></h4></div>
+
+              <div class="col-12"><h4>Ghi chú: <%= invoice.note%></h4></div>
+              <div class="col-12"><h3>Items:</h3></div>
+            </div>
+
+            <table
+              class="table table-sm table-striped table-bordered border-primary"
+            >
+              <tr>
+                <th style="width: 10%">No.</th>
+                <th style="width: 50%">Tên</th>
+                <th style="width: 30%">Giá</th>
+                <th style="width: 10%">Số lượng</th>
+              </tr>
+              <% invoice.items.forEach((item, index)=>{%>
+              <tr>
+                <td><h4><%= parseInt(index) + 1 %></h4></td>
+                <td><h4><%= item.name %></h4></td>
+                <td><h4><%= item.price %></h4></td>
+                <td><h4><%= item.count %></h4></td>
+              </tr>
+              <% }) %>
+              <tr>
+                <td colspan="2"><h2>Tổng cộng:</h2></td>
+                <td colspan="2" class="text-right">
+                  <h2><%= invoice.value %></h2>
+                </td>
+              </tr>
+            </table>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
