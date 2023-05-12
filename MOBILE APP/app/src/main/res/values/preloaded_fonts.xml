@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/arizonia</item>
+        <item>@font/berkshire_swash</item>
+        <item>@font/calistoga</item>
+        <item>@font/charm</item>
+        <item>@font/cherry_swash</item>
+        <item>@font/croissant_one</item>
+        <item>@font/lily_script_one</item>
+        <item>@font/lobster</item>
+    </array>
+</resources>
